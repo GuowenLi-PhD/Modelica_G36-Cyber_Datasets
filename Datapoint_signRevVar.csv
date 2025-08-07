@@ -1,0 +1,9 @@
+﻿Variable,Data Point Name,Description,Dymola Model Output Variable Expressions,Unit
+var5,Ease Zone: Electric Reheating Coil Power Consumption,East Zone Reheating Coil Valve Power Consumption,eas.terHea.Q2_flow,W
+var16,South Zone: Electric Reheating Coil Power Consumption,South Zone Reheating Coil Valve Power Consumption,sou.terHea.Q2_flow,W
+var27,West Zone: Electric Reheating Coil Power Consumption,West Zone Reheating Coil Valve Power Consumption,wes.terHea.Q2_flow,W
+var38,North Zone: Electric Reheating Coil Power Consumption,North Zone Reheating Coil Valve Power Consumption,nor.terHea.Q2_flow,W
+var49,Core Zone: Electric Reheating Coil Power Consumption,Core Zone Reheating Coil Valve Power Consumption,cor.terHea.Q2_flow,W
+var69,AHU: Supply Air Mass Flow Rate,Supply air mass flow rate,eco.port_Sup.m_flow,kg/s
+var79,AHU: Heating coil heat transfer rate,Heating coil heat transfer rate,heaCoi.Q1_flow,W
+var112,Hot Water Loop: Bypass  Hot Water Flow Rate,Flow rate of the hot water loop  in the bypass,valBypBoi.port_a.m_flow,kg/s
