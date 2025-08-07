@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="1-MTI.svg"
+   id="svg174"
+   version="1.1"
+   class="st11"
+   color-interpolation-filters="sRGB"
+   xml:space="preserve"
+   viewBox="0 0 544.12499 199"
+   height="2.7638888in"
+   width="7.5572915in"><metadata
+   id="metadata178"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   inkscape:current-layer="svg174"
+   inkscape:window-maximized="1"
+   inkscape:window-y="-8"
+   inkscape:window-x="-8"
+   inkscape:cy="216.45724"
+   inkscape:cx="399.05648"
+   inkscape:zoom="1.404839"
+   fit-margin-bottom="0"
+   fit-margin-right="0"
+   fit-margin-left="0"
+   fit-margin-top="0"
+   showgrid="false"
+   id="namedview176"
+   inkscape:window-height="1017"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+	<v:documentProperties
+   v:viewMarkup="false"
+   v:langID="1033">
+		<v:userDefs>
+			<v:ud
+   v:val="VT4(Rectangle)"
+   v:prompt=""
+   v:nameU="msvSubprocessMaster" />
+			<v:ud
+   v:val="VT0(1):26"
+   v:nameU="msvNoAutoConnect" />
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style
+   id="style2"
+   type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:#000000;stroke-width:0.25}
+		.st2 {fill:#000000;font-family:Times New Roman;font-size:1.16666em}
+		.st3 {font-size:1em}
+		.st4 {marker-end:url(#mrkr13-30);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st5 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.28409090909091}
+		.st6 {fill:none;stroke:none;stroke-width:0.25}
+		.st7 {fill:#000000;font-family:Times New Roman;font-size:1.00001em}
+		.st8 {stroke:#000000;stroke-dasharray:7,5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st9 {fill:#000000;font-family:Arial;font-size:1.00001em}
+		.st10 {marker-end:url(#mrkr4-72);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st11 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs
+   id="Markers">
+		<g
+   id="lend13">
+			<path
+   id="path4"
+   style="stroke:none"
+   d="M 3,1 0,0 3,-1 v 2" />
+		</g>
+		<marker
+   overflow="visible"
+   markerUnits="strokeWidth"
+   orient="auto"
+   refX="-10.56"
+   v:setback="10.56"
+   v:arrowSize="2"
+   v:arrowType="13"
+   class="st5"
+   id="mrkr13-30">
+			<use
+   height="100%"
+   width="100%"
+   y="0"
+   x="0"
+   id="use7"
+   transform="scale(-3.52)"
+   xlink:href="#lend13" />
+		</marker>
+		<g
+   id="lend4">
+			<path
+   id="path10"
+   style="stroke:none"
+   d="M 2,1 0,0 2,-1 v 2" />
+		</g>
+		<marker
+   overflow="visible"
+   markerUnits="strokeWidth"
+   orient="auto"
+   refX="-7.04"
+   v:setback="7.04"
+   v:arrowSize="2"
+   v:arrowType="4"
+   class="st5"
+   id="mrkr4-72">
+			<use
+   height="100%"
+   width="100%"
+   y="0"
+   x="0"
+   id="use13"
+   transform="scale(-3.52)"
+   xlink:href="#lend4" />
+		</marker>
+	</defs>
+	<g
+   transform="translate(-107.875,-62.5)"
+   id="g172"
+   v:groupContext="foregroundPage"
+   v:index="1"
+   v:mID="0">
+		<v:userDefs>
+			<v:ud
+   v:val="VT0(0):26"
+   v:nameU="msvThemeOrder" />
+		</v:userDefs>
+		<title
+   id="title17">Page-1</title>
+		<v:pageProperties
+   v:shadowOffsetY="-9"
+   v:shadowOffsetX="9"
+   v:drawingUnits="0"
+   v:pageScale="1"
+   v:drawingScale="1" />
+		<v:layer
+   v:index="0"
+   v:name="Connector" />
+		<g
+   v:groupContext="group"
+   v:mID="3"
+   transform="translate(108,-450)"
+   id="group3-1">
+			<title
+   id="title19">Sheet.3</title>
+			<g
+   transform="translate(0,-18)"
+   v:groupContext="shape"
+   v:mID="1"
+   id="shape1-2">
+				<title
+   id="title21">Rectangle</title>
+				<desc
+   id="desc23">Modelica Template</desc>
+				<v:userDefs>
+					<v:ud
+   v:val="VT0(15):26"
+   v:nameU="visVersion" />
+				</v:userDefs>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="36"
+   width="108.01"
+   cy="594"
+   cx="54" />
+				<rect
+   id="rect25"
+   class="st1"
+   height="36"
+   width="108"
+   y="576"
+   x="0" />
+				<text
+   id="text29"
+   v:langID="1033"
+   class="st2"
+   y="589.79999"
+   x="27.57"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Modelica <tspan
+   id="tspan27"
+   class="st3"
+   dy="1.2em"
+   x="27.57">Template</tspan></text>			</g>
+			<g
+   v:groupContext="shape"
+   v:mID="2"
+   id="shape2-6">
+				<title
+   id="title32">Rectangle.2</title>
+				<desc
+   id="desc34">.mo</desc>
+				<v:userDefs>
+					<v:ud
+   v:val="VT0(15):26"
+   v:nameU="visVersion" />
+				</v:userDefs>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="108.01"
+   cy="603"
+   cx="54" />
+				<rect
+   id="rect36"
+   class="st1"
+   height="18"
+   width="108"
+   y="594"
+   x="0" />
+				<text
+   id="text38"
+   v:langID="1033"
+   class="st2"
+   y="607.20001"
+   x="43.310001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />.mo</text>			</g>
+		</g>
+		<g
+   v:groupContext="group"
+   v:mID="4"
+   transform="translate(288,-450)"
+   id="group4-9">
+			<title
+   id="title42">Sheet.4</title>
+			<g
+   transform="translate(0,-18)"
+   v:groupContext="shape"
+   v:mID="5"
+   id="shape5-10">
+				<title
+   id="title44">Rectangle</title>
+				<desc
+   id="desc46">Emulation Model</desc>
+				<v:userDefs>
+					<v:ud
+   v:val="VT0(15):26"
+   v:nameU="visVersion" />
+				</v:userDefs>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="36"
+   width="108.01"
+   cy="594"
+   cx="54" />
+				<rect
+   id="rect48"
+   class="st1"
+   height="36"
+   width="108"
+   y="576"
+   x="0" />
+				<text
+   id="text50"
+   v:langID="1033"
+   class="st2"
+   y="598.20001"
+   x="4.8099999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Emulation Model</text>			</g>
+			<g
+   v:groupContext="shape"
+   v:mID="6"
+   id="shape6-13">
+				<title
+   id="title53">Rectangle.2</title>
+				<desc
+   id="desc55">wrapper.fmu</desc>
+				<v:userDefs>
+					<v:ud
+   v:val="VT0(15):26"
+   v:nameU="visVersion" />
+				</v:userDefs>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="108.01"
+   cy="603"
+   cx="54" />
+				<rect
+   id="rect57"
+   class="st1"
+   height="18"
+   width="108"
+   y="594"
+   x="0" />
+				<text
+   id="text59"
+   v:langID="1033"
+   class="st2"
+   y="607.20001"
+   x="18.040001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />wrapper.fmu</text>			</g>
+		</g>
+		<g
+   transform="translate(468,-360)"
+   v:groupContext="shape"
+   v:mID="20"
+   id="shape20-16">
+			<title
+   id="title63">Round Corner Rectangle</title>
+			<desc
+   id="desc65">Simulation Manager</desc>
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CTypeTopLeftSnip" />
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CTypeTopRightSnip" />
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CTypeBotLeftSnip" />
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CTypeBotRightSnip" />
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CornerLockHoriz" />
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CornerLockVert" />
+				<v:ud
+   v:val="VT0(0):5"
+   v:prompt=""
+   v:nameU="CornerLockDiag" />
+				<v:ud
+   v:val="VT0(0.15):1"
+   v:prompt=""
+   v:nameU="TopLeftOffset" />
+				<v:ud
+   v:val="VT0(0.15):1"
+   v:prompt=""
+   v:nameU="TopRightOffset" />
+				<v:ud
+   v:val="VT0(0.15):1"
+   v:prompt=""
+   v:nameU="BotLeftOffset" />
+				<v:ud
+   v:val="VT0(0.15):1"
+   v:prompt=""
+   v:nameU="BotRightOffset" />
+				<v:ud
+   v:val="VT0(15):26"
+   v:prompt=""
+   v:nameU="visVersion" />
+				<v:ud
+   v:val="VT0(0.2500001937151):0"
+   v:prompt=""
+   v:nameU="TopLeftOffset" />
+				<v:ud
+   v:val="VT0(0.25):0"
+   v:prompt=""
+   v:nameU="TopRightOffset" />
+				<v:ud
+   v:val="VT0(0.2500001937151):0"
+   v:prompt=""
+   v:nameU="BotLeftOffset" />
+				<v:ud
+   v:val="VT0(0.25):0"
+   v:prompt=""
+   v:nameU="BotRightOffset" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="144"
+   width="81.01"
+   cy="540"
+   cx="40.5" />
+			<path
+   id="path67"
+   class="st1"
+   d="M 18,612 H 63 A 17.9997,17.9997 -180 0 0 81,594 V 486 A 17.9997,17.9997 -180 0 0 63,468 H 18 A 17.9997,17.9997 -180 0 0 0,486 v 108 a 17.9997,17.9997 -180 0 0 18,18 z" />
+			<text
+   id="text71"
+   v:langID="1033"
+   class="st2"
+   y="535.79999"
+   x="9.7799997"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Simulation <tspan
+   id="tspan69"
+   class="st3"
+   dy="1.2em"
+   x="15.62">Manager</tspan></text>		</g>
+		<g
+   v:groupContext="group"
+   v:mID="10"
+   transform="translate(288,-360)"
+   id="group10-20">
+			<title
+   id="title74">Sheet.10</title>
+			<g
+   v:groupContext="shape"
+   v:mID="11"
+   id="shape11-21">
+				<title
+   id="title76">Rectangle</title>
+				<desc
+   id="desc78">Threat Definition and Injection</desc>
+				<v:userDefs>
+					<v:ud
+   v:val="VT0(15):26"
+   v:nameU="visVersion" />
+				</v:userDefs>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="54"
+   width="108.01"
+   cy="585"
+   cx="54" />
+				<rect
+   id="rect80"
+   class="st1"
+   height="54"
+   width="108"
+   y="558"
+   x="0" />
+				<text
+   id="text84"
+   v:langID="1033"
+   class="st2"
+   y="580.79999"
+   x="5.21"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Threat Definition <tspan
+   id="tspan82"
+   class="st3"
+   dy="1.2em"
+   x="17.26">and Injection</tspan></text>			</g>
+		</g>
+		<g
+   transform="translate(396,-486)"
+   v:groupContext="shape"
+   v:mID="13"
+   id="shape13-25">
+			<title
+   id="title88">Sheet.13</title>
+			<path
+   id="path90"
+   class="st4"
+   d="M 0,612 H 61.44" />
+		</g>
+		<g
+   transform="translate(396,-387)"
+   v:groupContext="shape"
+   v:mID="14"
+   id="shape14-31">
+			<title
+   id="title93">Sheet.14</title>
+			<path
+   id="path95"
+   class="st4"
+   d="M 0,612 H 61.44" />
+		</g>
+		<g
+   transform="translate(216,-486)"
+   v:groupContext="shape"
+   v:mID="15"
+   id="shape15-36">
+			<title
+   id="title98">Sheet.15</title>
+			<path
+   id="path100"
+   class="st4"
+   d="M 0,612 H 61.44" />
+		</g>
+		<g
+   transform="translate(167,-467)"
+   v:groupContext="shape"
+   v:mID="16"
+   id="shape16-41">
+			<title
+   id="title103">Sheet.16</title>
+			<desc
+   id="desc105">parser.py</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="152"
+   cy="602"
+   cx="76" />
+			<rect
+   id="rect107"
+   class="st6"
+   height="20"
+   width="152"
+   y="592"
+   x="0" />
+			<text
+   id="text109"
+   v:langID="1033"
+   class="st7"
+   y="605.59998"
+   x="53.84"><v:paragraph
+   v:horizAlign="1" /><v:tabList />parser.py</text>		</g>
+		<g
+   transform="translate(356,-486)"
+   v:groupContext="shape"
+   v:mID="18"
+   id="shape18-44">
+			<title
+   id="title112">Sheet.18</title>
+			<desc
+   id="desc114">pyFMI</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="152"
+   cy="602"
+   cx="76" />
+			<rect
+   id="rect116"
+   class="st6"
+   height="20"
+   width="152"
+   y="592"
+   x="0" />
+			<text
+   id="text118"
+   v:langID="1033"
+   class="st7"
+   y="605.59998"
+   x="59.330002"><v:paragraph
+   v:horizAlign="1" /><v:tabList />pyFMI</text>		</g>
+		<g
+   transform="translate(355.5,-389.25)"
+   v:groupContext="shape"
+   v:mID="19"
+   id="shape19-47">
+			<title
+   id="title121">Sheet.19</title>
+			<desc
+   id="desc123">pyThreat</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="152"
+   cy="602"
+   cx="76" />
+			<rect
+   id="rect125"
+   class="st6"
+   height="20"
+   width="152"
+   y="592"
+   x="0" />
+			<text
+   id="text127"
+   v:langID="1033"
+   class="st7"
+   y="605.59998"
+   x="54.34"><v:paragraph
+   v:horizAlign="1" /><v:tabList />pyThreat</text>		</g>
+		<g
+   transform="rotate(90,411.75,474.75)"
+   v:groupContext="shape"
+   v:mID="21"
+   id="shape21-50">
+			<title
+   id="title130">Sheet.21</title>
+			<path
+   id="path132"
+   class="st8"
+   d="M 0,612 H 198" />
+		</g>
+		<g
+   transform="translate(163,-523.25)"
+   v:groupContext="shape"
+   v:mID="22"
+   id="shape22-53">
+			<title
+   id="title135">Sheet.22</title>
+			<desc
+   id="desc137">Modelica</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="152"
+   cy="602"
+   cx="76" />
+			<rect
+   id="rect139"
+   class="st6"
+   height="20"
+   width="152"
+   y="592"
+   x="0" />
+			<text
+   id="text141"
+   v:langID="1033"
+   class="st9"
+   y="605.59998"
+   x="51.990002"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Modelica</text>		</g>
+		<g
+   transform="translate(234,-524)"
+   v:groupContext="shape"
+   v:mID="23"
+   id="shape23-56">
+			<title
+   id="title144">Sheet.23</title>
+			<desc
+   id="desc146">Python</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="152"
+   cy="602"
+   cx="76" />
+			<rect
+   id="rect148"
+   class="st6"
+   height="20"
+   width="152"
+   y="592"
+   x="0" />
+			<text
+   id="text150"
+   v:langID="1033"
+   class="st9"
+   y="605.59998"
+   x="57.32"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Python</text>		</g>
+		<g
+   transform="translate(549,-432)"
+   v:groupContext="shape"
+   v:mID="24"
+   id="shape24-59">
+			<title
+   id="title153">Sheet.24</title>
+			<path
+   id="path155"
+   class="st4"
+   d="M 0,612 H 34.44" />
+		</g>
+		<g
+   transform="translate(500,-432)"
+   v:groupContext="shape"
+   v:mID="25"
+   id="shape25-64">
+			<title
+   id="title158">Sheet.25</title>
+			<desc
+   id="desc160">KPIs</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="152"
+   cy="602"
+   cx="76" />
+			<rect
+   id="rect162"
+   class="st6"
+   height="20"
+   width="152"
+   y="592"
+   x="0" />
+			<text
+   id="text164"
+   v:langID="1033"
+   class="st7"
+   y="605.59998"
+   x="64"><v:paragraph
+   v:horizAlign="1" /><v:tabList />KPIs</text>		</g>
+		<g
+   transform="translate(432.375,-486)"
+   v:layerMember="0"
+   v:groupContext="shape"
+   v:mID="29"
+   id="shape29-67">
+			<title
+   id="title167">Dynamic connector</title>
+			<path
+   id="path169"
+   class="st10"
+   d="m 0,612 v 54 h -90.37 v 10.96" />
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,19 @@
+name: cyber-attack-py37
+channels:
+  - pytorch
+  - dglteam
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip
+  - flask
+  - pandas
+  - pyfmi=2.6
+  - casadi
+  - numpy=1.17.5
+  - pip:
+    - buildingspy==2.1.0
+    - openopt
+    - FuncDesigner
+    - DerApproximator

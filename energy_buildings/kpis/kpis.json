@@ -1,0 +1,2 @@
+{"AirZoneTemperature[1]": ["conVAVCor.TZon"], "AirZoneTemperature[2]": ["conVAVSou.TZon"], "AirZoneTemperature[3]": ["conVAVEas.TZon"], "AirZoneTemperature[4]": ["conVAVNor.TZon"], "AirZoneTemperature[5]": ["conVAVWes.TZon"], "ElectricPower": ["eleCoiVAV.y","eleSupFan.y", "eleCWP.y", "eleChi.y", "eleCHWP.y", "eleCT.y","eleHWP.y"], "GasPower":["gasBoi.y"],"EquipmentOnOff": ["conAHU.ySupFan","chiWSE.yPum[1]", "pumCW.y", "pumHW.y", "cooTow.y", "chiOn.y"], "ControlOutput": ["conAHU.TSup"],"ControlSetpoint": ["conAHU.TSupSet"],"Overwrite":["*ove*"]}
+

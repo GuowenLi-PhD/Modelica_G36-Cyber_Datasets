@@ -1,0 +1,4 @@
+﻿simulateModel("FaultInjection.Utilities.InsertionTypes.Variables.SignalCorruption.Examples.ExternalInteger", stopTime=10800, resultFile="ExternalInteger");
+removePlots(false);
+createPlot(id=1, position={0, 0, 1385, 699}, y={"extAtt.u", "extAtt.y", "extAtt.uFau"}, range={0.0, 11000.0, 5.5, 12.5}, erase=false, grid=true, filename="ExternalInteger.mat", colors={{28,108,200}, {28,108,200}, {28,108,200}});
+

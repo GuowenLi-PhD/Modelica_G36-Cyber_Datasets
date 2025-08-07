@@ -1,0 +1,5 @@
+Threat,	Location,Start Time,	End Time,	Injection Type,	Temporal,	Description
+1,	zone temperature reset requests,	12pm,	3pm,	v,	max,	attack the zone temperature reset requests numer to its maximum value of 15
+2,	chiller on/off signal,	12pm,	3pm,	v,	square pulse,	launch a square pulse attack with a period of one hour on chiller on/off control signal
+3,	chilled water supply temperature setpoint,	10am,	1pm,	v,	block,	block chiller from receiving chilled water temperature setpoint
+4,	zone temperature setpoint,	1pm,	3pm,	p,	constant,	change zone temperature cooling setpoint to a constant value of 22 °C

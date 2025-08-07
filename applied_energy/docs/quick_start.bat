@@ -1,0 +1,1 @@
+docker run --rm -v %CD%:/docs -it sphinx sphinx-quickstart

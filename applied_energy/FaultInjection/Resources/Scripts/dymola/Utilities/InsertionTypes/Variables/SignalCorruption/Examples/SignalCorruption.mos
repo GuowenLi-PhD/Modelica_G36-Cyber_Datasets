@@ -1,0 +1,5 @@
+﻿simulateModel("FaultInjection.Utilities.InsertionTypes.Variables.SignalCorruption.Examples.SignalCorruption", stopTime=10800, resultFile="SignalCorruption");
+createPlot(id=1, position={0, 0, 1616, 621}, y={"tem.y", "minAtt.y", "maxAtt.y", "scaAtt.y", "addAtt.y", "ramAtt.y", "ranAtt.y",
+ "extAtt.y"}, range={0.0, 3.0, 3.0, 16.0}, erase=false, grid=true, filename="SignalCorruption.mat", colors={{28,108,200}, {238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, 
+{244,125,35}, {102,44,145}}, timeUnit="h", displayUnits={"degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC"});
+

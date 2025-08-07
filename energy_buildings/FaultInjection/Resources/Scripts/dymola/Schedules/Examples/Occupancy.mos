@@ -1,0 +1,5 @@
+﻿simulateModel("FaultInjection.Schedules.Examples.Occupancy", stopTime=2678400, method="Cvode", tolerance=1e-06, resultFile="Occupancy");
+createPlot(id=2, position={0, 0, 1645, 706}, y={"occ.holFla.holFla"}, range={0.0, 31.0, -0.2, 1.2}, erase=false, grid=true, colors={{28,108,200}}, timeUnit="d",filename="Occupancy.mat");
+createPlot(id=2, position={0, 0, 1645, 706}, y={"occ.occupied"}, range={0.0, 31.0, -0.2, 1.2}, erase=false, grid=true, subPlot=102, colors={{28,108,200}}, timeUnit="d");
+createPlot(id=2, position={0, 0, 1645, 706}, y={"occ.tNexOcc"}, range={0.0, 31.0, -100000.0, 400000.0}, erase=false, grid=true, subPlot=103, colors={{28,108,200}}, timeUnit="d", displayUnits={"s"});
+

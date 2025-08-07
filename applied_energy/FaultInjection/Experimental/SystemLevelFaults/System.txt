@@ -1,0 +1,213 @@
+within FaultInjection.Experimental.SystemLevelFaults;
+model System "System example for fault injection"
+  extends Modelica.Icons.Example;
+  extends
+    FaultInjection.Experimental.SystemLevelFaults.BaseClasses.PartialAirside(fanSup(
+        show_T=true),
+    conAHU(
+      pNumIgnReq=1,
+      numIgnReqSupTem=1,
+           kTSup=0.1, TiTSup=120),
+    conVAVWes(errTZonCoo_1=1, errTZonCoo_2=0.6),
+    conVAVCor(errTZonCoo_1=1, errTZonCoo_2=0.6),
+    conVAVSou(errTZonCoo_1=1, errTZonCoo_2=0.6),
+    conVAVEas(errTZonCoo_1=1, errTZonCoo_2=0.6),
+    conVAVNor(errTZonCoo_1=1, errTZonCoo_2=0.6));
+  extends
+    FaultInjection.Experimental.SystemLevelFaults.BaseClasses.PartialWaterside(
+    redeclare Buildings.Applications.DataCenters.ChillerCooled.Equipment.IntegratedPrimaryLoadSide chiWSE(
+      addPowerToMedium=false, perPum=perPumPri),
+    watVal(
+      redeclare package Medium = MediumW,
+      m_flow_nominal=m1_flow_chi_nominal,
+      dpValve_nominal=6000),
+    final QEva_nominal = designCoolLoad,
+    pumCW(use_inputFilter=true),
+    resCHW(dp_nominal=280000),
+    temDifPreRes(
+      uTri=0.9,
+      dpMin=0.5*dpSetPoi,
+      dpMax=dpSetPoi,
+      TMin(displayUnit="degC") = 278.15,
+      TMax(displayUnit="degC") = 283.15));
+
+  parameter Buildings.Fluid.Movers.Data.Generic[numChi] perPumPri(
+    each pressure=Buildings.Fluid.Movers.BaseClasses.Characteristics.flowParameters(
+          V_flow=m2_flow_chi_nominal/1000*{0.2,0.6,1.0,1.2},
+          dp=(dp2_chi_nominal+dp2_wse_nominal+280000+36000)*{1.5,1.3,1.0,0.6}))
+    "Performance data for primary pumps";
+
+  Buildings.Applications.DataCenters.ChillerCooled.Controls.CoolingMode
+    cooModCon(
+    tWai=tWai,
+    deaBan1=1.1,
+    deaBan2=0.5,
+    deaBan3=1.1,
+    deaBan4=0.5)
+    "Cooling mode controller"
+    annotation (Placement(transformation(extent={{-280,-288},{-260,-268}})));
+  Modelica.Blocks.Sources.RealExpression towTApp(y=cooTow.TApp_nominal)
+    "Cooling tower approach temperature"
+    annotation (Placement(transformation(extent={{-320,-288},{-300,-268}})));
+  Buildings.Controls.OBC.CDL.Conversions.BooleanToReal sysOn
+    "System on based on fan control"
+    annotation (Placement(transformation(extent={{-188,-160},{-168,-140}})));
+  Modelica.Blocks.Sources.RealExpression yVal5(y=if cooModCon.y == Integer(
+        Buildings.Applications.DataCenters.Types.CoolingModes.FullMechanical)
+         then 1 else 0)
+    "On/off signal for valve 5"
+    annotation (Placement(transformation(extent={{740,-192},{720,-172}})));
+  Modelica.Blocks.Sources.RealExpression yVal6(y=if cooModCon.y == Integer(
+        Buildings.Applications.DataCenters.Types.CoolingModes.FreeCooling)
+         then 1 else 0)
+    "On/off signal for valve 6"
+    annotation (Placement(transformation(extent={{740,-208},{720,-188}})));
+  Modelica.Blocks.Logical.And andWSEOn
+    annotation (Placement(transformation(extent={{-140,-290},{-120,-270}})));
+  Modelica.Blocks.Logical.And andChiOn
+    annotation (Placement(transformation(extent={{-140,-260},{-120,-240}})));
+  Buildings.Controls.OBC.CDL.Continuous.Product proCooTow
+    annotation (Placement(transformation(extent={{-140,-220},{-120,-200}})));
+  Buildings.Controls.OBC.CDL.Continuous.Product proCWP
+    annotation (Placement(transformation(extent={{-140,-332},{-120,-312}})));
+  Buildings.Controls.OBC.CDL.Continuous.Product proCHWP
+    annotation (Placement(transformation(extent={{680,-238},{660,-218}})));
+equation
+
+  connect(chiWSE.TCHWSupWSE,cooModCon. TCHWSupWSE)
+    annotation (Line(
+      points={{315,-190},{-292,-190},{-292,-282},{-282,-282}},
+      color={0,0,127}));
+  connect(towTApp.y,cooModCon. TApp)
+    annotation (Line(
+      points={{-299,-278},{-282,-278}},
+      color={0,0,127}));
+  connect(cooModCon.TCHWRetWSE, TCHWRet.T)
+    annotation (Line(
+      points={{-282,-286},{-292,-286},{-292,-174},{220,-174},{220,-144},{250,-144},
+          {250,-149}},
+    color={0,0,127}));
+  connect(cooModCon.y, chiStaCon.cooMod)
+    annotation (Line(
+      points={{-259,-278},{-254,-278},{-254,-242},{-232,-242}},
+      color={255,127,0}));
+  connect(cooModCon.y,intToBoo.u)
+    annotation (Line(
+      points={{-259,-278},{-232,-278}},
+      color={255,127,0}));
+  connect(cooModCon.y, cooTowSpeCon.cooMod) annotation (Line(points={{-259,-278},
+          {-254,-278},{-254,-205.556},{-232,-205.556}},
+                                                     color={255,127,0}));
+  connect(cooModCon.y, CWPumCon.cooMod) annotation (Line(points={{-259,-278},{-254,
+          -278},{-254,-313},{-234,-313}}, color={255,127,0}));
+  connect(yVal5.y, chiWSE.yVal5) annotation (Line(points={{719,-182},{648,-182},
+          {648,-189},{337.6,-189}},
+                              color={0,0,127}));
+  connect(yVal6.y, chiWSE.yVal6) annotation (Line(points={{719,-198},{646,-198},
+          {646,-185.8},{337.6,-185.8}},
+                                  color={0,0,127}));
+  connect(sysOn.u, andChiOn.u1) annotation (Line(points={{-190,-150},{-196,-150},
+          {-196,-178},{-150,-178},{-150,-250},{-142,-250}}, color={255,0,255}));
+  connect(sysOn.u, andWSEOn.u1) annotation (Line(points={{-190,-150},{-196,-150},
+          {-196,-178},{-150,-178},{-150,-280},{-142,-280}}, color={255,0,255}));
+  connect(chiOn.y, andChiOn.u2) annotation (Line(points={{-169,-248},{-155.5,-248},
+          {-155.5,-258},{-142,-258}}, color={255,0,255}));
+  connect(wseOn.y, andWSEOn.u2) annotation (Line(points={{-169,-278},{-156,-278},
+          {-156,-288},{-142,-288}}, color={255,0,255}));
+  connect(conAHU.ySupFan, sysOn.u) annotation (Line(points={{425,450},{462,450},
+          {462,540},{-200,540},{-200,-150},{-190,-150}}, color={255,0,255}));
+  connect(andChiOn.y, chiWSE.on[1]) annotation (Line(points={{-119,-250},{0,-250},
+          {0,-220},{360,-220},{360,-193.6},{337.6,-193.6}}, color={255,0,255}));
+  connect(cooTowSpeCon.y, proCooTow.u2) annotation (Line(points={{-209,-209.111},
+          {-162,-209.111},{-162,-216},{-142,-216}}, color={0,0,127}));
+  connect(sysOn.y, proCooTow.u1) annotation (Line(points={{-167,-150},{-160,-150},
+          {-160,-204},{-142,-204}}, color={0,0,127}));
+  connect(proCooTow.y, cooTow.y) annotation (Line(points={{-119,-210},{120,-210},
+          {120,-260},{360,-260},{360,-280},{378,-280}}, color={0,0,127}));
+  connect(sysOn.y, val.y) annotation (Line(points={{-167,-150},{-160,-150},{-160,
+          -184},{118,-184},{118,-262},{288,-262},{288,-276}}, color={0,0,127}));
+  connect(gai.y, proCWP.u2) annotation (Line(points={{-169,-318},{-158,-318},{-158,
+          -328},{-142,-328}}, color={0,0,127}));
+  connect(sysOn.y, proCWP.u1) annotation (Line(points={{-167,-150},{-160,-150},{
+          -160,-316},{-142,-316}}, color={0,0,127}));
+  connect(sysOn.y, proCHWP.u1) annotation (Line(points={{-167,-150},{-158,-150},
+          {-158,-194},{116,-194},{116,-258},{702,-258},{702,-222},{682,-222}},
+        color={0,0,127}));
+  connect(watVal.port_a, cooCoi.port_b1) annotation (Line(points={{180,-70},{180,
+          -52},{190,-52}}, color={0,127,255}));
+  connect(cooCoi.port_a1, TCHWSup.port_b) annotation (Line(points={{210,-52},{234,
+          -52},{234,-100},{400,-100}}, color={0,127,255}));
+  connect(proCHWP.y, chiWSE.yPum[1]) annotation (Line(points={{659,-228},{640,-228},
+          {640,-181.6},{337.6,-181.6}}, color={0,0,127}));
+  connect(weaBus.TWetBul, cooModCon.TWetBul) annotation (Line(
+      points={{-320,180},{-320,-118},{-290,-118},{-290,-274},{-282,-274}},
+      color={255,204,51},
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{-6,3},{-6,3}},
+      horizontalAlignment=TextAlignment.Right));
+  connect(weaBus.TWetBul, cooTow.TAir) annotation (Line(
+      points={{-320,180},{-320,-118},{-290,-118},{-290,-186},{112,-186},{112,-264},
+          {358,-264},{358,-284},{378,-284}},
+      color={255,204,51},
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{-6,3},{-6,3}},
+      horizontalAlignment=TextAlignment.Right));
+  connect(TCWSup.T, cooTowSpeCon.TCWSup) annotation (Line(points={{470,-277},{
+          470,-256},{114,-256},{114,-196},{-238,-196},{-238,-212.667},{-232,
+          -212.667}},
+        color={0,0,127}));
+  connect(TCHWSup.T, cooTowSpeCon.TCHWSup) annotation (Line(points={{410,-89},{
+          410,-84},{382,-84},{382,-222},{110,-222},{110,-192},{-242,-192},{-242,
+          -216.222},{-232,-216.222}},
+                            color={0,0,127}));
+  connect(andWSEOn.y, chiWSE.on[2]) annotation (Line(points={{-119,-280},{2,
+          -280},{2,-220},{360,-220},{360,-193.6},{337.6,-193.6}}, color={255,0,
+          255}));
+  connect(conAHU.yCoo, watVal.y) annotation (Line(points={{425,376},{430,376},{
+          430,46},{156,46},{156,-80},{168,-80}}, color={0,0,127}));
+  connect(proCWP.y, pumCW.y) annotation (Line(points={{-119,-322},{270,-322},{
+          270,-320},{516,-320},{516,-260},{540,-260}}, color={0,0,127}));
+  connect(pumSpe.y, proCHWP.u2) annotation (Line(points={{-155,-360},{772,-360},
+          {772,-234},{682,-234}},color={0,0,127}));
+  connect(watVal.y_actual, temDifPreRes.u) annotation (Line(points={{173,-85},{
+          173,-104},{-344,-104},{-344,-356},{-322,-356}}, color={0,0,127}));
+  connect(cooModCon.y, temDifPreRes.uOpeMod) annotation (Line(points={{-259,
+          -278},{-254,-278},{-254,-300},{-342,-300},{-342,-350},{-322,-350}},
+        color={255,127,0}));
+  connect(temDifPreRes.TSet, cooModCon.TCHWSupSet) annotation (Line(points={{
+          -299,-361},{-280,-361},{-280,-392},{-340,-392},{-340,-224},{-288,-224},
+          {-288,-270},{-282,-270}}, color={0,0,127}));
+  connect(temDifPreRes.TSet, chiWSE.TSet) annotation (Line(points={{-299,-361},
+          {-280,-361},{-280,-392},{-340,-392},{-340,-224},{358,-224},{358,
+          -196.8},{337.6,-196.8}}, color={0,0,127}));
+  connect(temDifPreRes.TSet, cooTowSpeCon.TCHWSupSet) annotation (Line(points={{-299,
+          -361},{-280,-361},{-280,-392},{-340,-392},{-340,-224},{-288,-224},{
+          -288,-209.111},{-232,-209.111}},        color={0,0,127}));
+  annotation ( Diagram(
+        coordinateSystem(preserveAspectRatio=false, extent={{-460,-420},{1400,
+            660}}), graphics={Text(
+          extent={{854,-136},{1416,-374}},
+          lineColor={0,0,0},
+          fontSize=9,
+          horizontalAlignment=TextAlignment.Left,
+          fontName="monospace",
+          textString="This is a chilled water system with an
+ integrated waterside economizer. 
+The chilled water serves one AHU with 
+5 VAV terminal boxes. 
+The chilled water system is controlled 
+using ASHRAE 1717 guideline, 
+and the VAV air system is controlled 
+using ASHRAE Guideline 36. ")}),
+    experiment(
+      StartTime=17280000,
+      StopTime=17884800,
+      __Dymola_Algorithm="Cvode"),
+    __Dymola_Commands(file=
+          "Resources/Scripts/Dymola/Experimental/SystemLevelFaults/System.mos"
+        "Simulate and Plot"));
+end System;

@@ -1,0 +1,9 @@
+MaxPowerFrequency
+ComparePumpFrequencyOpen
+ComparePumpVoltageOpen
+ComparePumpFrequencyClosedLoop
+ComparePumpPorposed
+ComparePumpVoltageClosedLoop
+CompareStartUp
+CompareLoadIncrease
+CompareVoltageDip

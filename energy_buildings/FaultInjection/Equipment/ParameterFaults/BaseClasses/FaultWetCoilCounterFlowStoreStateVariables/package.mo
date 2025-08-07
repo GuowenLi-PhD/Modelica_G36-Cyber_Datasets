@@ -1,0 +1,3 @@
+within FaultInjection.Equipment.ParameterFaults.BaseClasses;
+package FaultWetCoilCounterFlowStoreStateVariables
+end FaultWetCoilCounterFlowStoreStateVariables;

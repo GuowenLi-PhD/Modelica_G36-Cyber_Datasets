@@ -1,0 +1,16 @@
+name: cyber-attack-py38
+channels:
+  - pytorch
+  - dglteam
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - flask
+  - pandas
+  - pyfmi=2.6
+  - numpy=1.17.5
+  - casadi
+  - pip:
+    - buildingspy==2.1.0
