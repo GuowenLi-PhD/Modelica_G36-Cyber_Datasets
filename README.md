@@ -1,5 +1,3 @@
-# modelica-fault-library
-Base library for Modelica fault for thermal fluid systems
-
-# some experience
-1. add modelica-fault-library to PYTHONPATH so that we don't need install pydymola/kpis
+This repo reproduces the datasets and results presented in the two published journal papers.
+1. Fu, Yangyang, Zheng O'Neill, Zhiyao Yang, Veronica Adetola, Jin Wen, Lingyu Ren, Tim Wagner, Qi Zhu, and Terresa Wu. "Modeling and evaluation of cyber-attacks on grid-interactive efficient buildings." Applied Energy 303 (2021): 117639. DOI: https://doi.org/10.1016/j.apenergy.2021.117639
+2. Fu, Yangyang, Zheng O’Neill, and Veronica Adetola. "A flexible and generic functional mock-up unit based threat injection framework for grid-interactive efficient buildings: A case study in Modelica." Energy and Buildings 250 (2021): 111263. DOI: https://doi.org/10.1016/j.enbuild.2021.111263
